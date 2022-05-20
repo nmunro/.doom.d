@@ -14,3 +14,6 @@
 
 ; Projectile
 (setq projectile-project-search-path '("~/quicklisp/local-projects/" "~/dev/"))
+
+; Fonts
+(setq doom-font (font-spec :family "Fira Code" :size 14 :weight 'retina))
