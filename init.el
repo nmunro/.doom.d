@@ -12,8 +12,13 @@
        ;;chinese
        ;;japanese
 	   
-	   :checkers
+       :os
+       macos
+
+       :checkers
        syntax          ; tasing you for every semicolon you forget
+       flycheck
+       spell
 
        :completion
        company           ; the ultimate code completion backend
@@ -22,6 +27,7 @@
        ivy               ; a search engine for love and life
 
        :ui
+       ligatures
        ;;deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
@@ -37,7 +43,6 @@
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
-       ;;pretty-code       ; replace bits of code with pretty symbols
        ;tabs              ; an tab bar for Emacs
        treemacs          ; a project drawer, like neotree but cooler
        ;;unicode           ; extended unicode support for various languages
@@ -58,6 +63,8 @@
        rotate-text       ; cycle region at point between text candidates
        snippets          ; my elves. They type so I don't have to
        ;;word-wrap         ; soft wrapping with language-aware indent
+       (format
+        +black)
 
        :emacs
        dired             ; making dired pretty [functional]
@@ -78,12 +85,10 @@
        ;;editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        eval              ; run code, run (also, repls)
-       ;;flyspell          ; tasing you for misspelling mispelling
        ;;gist              ; interacting with github gists
        (lookup           ; helps you navigate your code and documentation
         +docsets)        ; ...or in Dash docsets locally
        ;;lsp
-       macos             ; MacOS-specific commands
        magit             ; a git porcelain for Emacs
        make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
@@ -138,8 +143,9 @@
        ;;purescript        ; javascript, but functional
        (python            ; beautiful is better than ugly
         +poetry
-        +pyimport
-        +pyisort)
+        +py-isort
+        +python-flake8
+        +pyimport)
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;rest              ; Emacs as a REST client
@@ -175,7 +181,6 @@
        ;; For literate config users. This will tangle+compile a config.org
        ;; literate config in your `doom-private-dir' whenever it changes.
        ;;literate
-
 
        ;(ligatures +extra +fira)
 

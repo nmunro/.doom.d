@@ -13,7 +13,7 @@
 (define-key evil-visual-state-map (kbd "C-s") 'evil-numbers/dec-at-pt)
 
 ; Projectile
-(setq projectile-project-search-path '("~/quicklisp/local-projects/" "~/dev/"))
+(setq projectile-project-search-path '("~/quicklisp/local-projects/" "~/dev/" "~/Projects/"))
 
 ; Fonts
 (setq doom-font (font-spec :family "Fira Code" :size 16 :weight 'Regular))
