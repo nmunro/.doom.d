@@ -141,7 +141,6 @@
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
        (python            ; beautiful is better than ugly
-        +poetry
         +py-isort
         +python-flake8
         +pyimport)
