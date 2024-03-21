@@ -87,7 +87,7 @@
        ;;gist              ; interacting with github gists
        (lookup           ; helps you navigate your code and documentation
         +docsets)        ; ...or in Dash docsets locally
-       ;;lsp
+       lsp
        magit             ; a git porcelain for Emacs
        make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
@@ -143,6 +143,7 @@
        (python            ; beautiful is better than ugly
         +py-isort
         +python-flake8
+        +pylsp
         +pyimport)
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
