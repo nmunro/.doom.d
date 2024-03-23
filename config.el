@@ -17,3 +17,16 @@
 
 ; Fonts
 (setq doom-font (font-spec :family "Fira Code" :size 16 :weight 'Regular))
+
+(after! lsp-mode
+  (lsp-register-client
+    (make-lsp-client :new-connection (lsp-stdio-connection "python3"
+                                      (lambda () '("localhost" "5678")))
+                     :major-modes '(python-mode)
+                     :server-id 'pylsp-docker)))
+
+(after! lsp-mode
+  (setq lsp-diagnostics-provider :auto  ; Use lsp-mode for diagnostics
+        lsp-pylsp-plugins-mypy-enabled t  ; Ensure mypy is enabled
+        lsp-pylsp-plugins-mypy-live-mode nil  ; Disable live mode if it's too performance-intensive
+        lsp-pylsp-plugins-mypy-args '("--ignore-missing-imports")))  ; Example of adding extra mypy args
